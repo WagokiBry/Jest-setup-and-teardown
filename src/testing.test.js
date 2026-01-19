@@ -40,7 +40,7 @@ describe("inner block", () => {
     counted = 2;
   });
 
-  test.only("test A", () => {
+  test("test A", () => {
     expect(counted).toBe(2);
   });
 });
@@ -48,3 +48,15 @@ describe("inner block", () => {
 test("test B", () => {
   expect(counted).toBe(1);
 });
+
+let mockedFunc = jest.fn(x => x+1)
+
+test.only("calling a mock functon",()=>{
+    mockedFunc(1);
+    mockedFunc(4)
+console.log(mockedFunc.mock.calls)
+console.log(mockedFunc.mock.results)
+})
+
+
+
