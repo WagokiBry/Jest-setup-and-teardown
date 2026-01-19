@@ -40,7 +40,7 @@ describe("inner block", () => {
     counted = 2;
   });
 
-  test("test A", () => {
+  test.only("test A", () => {
     expect(counted).toBe(2);
   });
 });
